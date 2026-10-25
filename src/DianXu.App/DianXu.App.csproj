@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>DianXu</AssemblyName>
+    <RootNamespace>DianXu</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\DianXu.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <Product>点序 · 屏幕连点器</Product>
+    <Description>支持多点顺序、独立等待时间和全局停止的屏幕连点器</Description>
+    <Copyright>2026</Copyright>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DianXu.Core\DianXu.Core.csproj" />
+    <Resource Include="Assets\DianXu.ico" />
+    <InternalsVisibleTo Include="DianXu.Tests" />
+  </ItemGroup>
+</Project>

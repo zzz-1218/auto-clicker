@@ -1,0 +1,9 @@
+<Window x:Class="DianXu.HotkeyWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Style="{StaticResource {x:Type Window}}" Title="全局快捷键" Width="410" SizeToContent="Height" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Background="White">
+ <StackPanel Margin="25,23,25,24"><TextBlock Text="全局快捷键" FontSize="20" FontWeight="SemiBold"/><TextBlock Text="切到其他软件时，也能控制点击任务。" Foreground="{StaticResource Muted}" FontSize="12" Margin="0,7,0,23"/>
+  <Grid Margin="0,0,0,14"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="135"/></Grid.ColumnDefinitions><TextBlock Text="开始 / 停止" VerticalAlignment="Center"/><ComboBox x:Name="ToggleBox" Grid.Column="1" AutomationProperties.Name="开始停止快捷键"/></Grid>
+  <Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="135"/></Grid.ColumnDefinitions><TextBlock Text="紧急停止" VerticalAlignment="Center"/><ComboBox x:Name="EmergencyBox" Grid.Column="1" AutomationProperties.Name="紧急停止快捷键"/></Grid>
+  <TextBlock Text="两个快捷键不能相同；已被占用的键无法保存。" Foreground="{StaticResource Muted}" FontSize="11" TextWrapping="Wrap" Margin="0,14,0,0"/>
+  <TextBlock x:Name="ErrorText" Foreground="#C44747" FontSize="12" TextWrapping="Wrap" Margin="0,14,0,0"/>
+  <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,18,0,0"><Button Content="取消" IsCancel="True" Width="80" Margin="0,0,9,0"/><Button Content="保存快捷键" Width="120" Style="{StaticResource PrimaryButton}" IsDefault="True" Click="SaveClick"/></StackPanel>
+ </StackPanel>
+</Window>

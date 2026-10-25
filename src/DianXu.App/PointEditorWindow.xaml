@@ -1,0 +1,14 @@
+<Window x:Class="DianXu.PointEditorWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Style="{StaticResource {x:Type Window}}" Title="编辑点击位置" Width="470" SizeToContent="Height" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Background="White">
+ <StackPanel Margin="26,23,26,24">
+  <TextBlock x:Name="HeadingText" Text="编辑点击位置" FontSize="20" FontWeight="SemiBold"/><TextBlock Text="为这个位置设置鼠标按键和独立等待时间。" Foreground="{StaticResource Muted}" FontSize="12" Margin="0,7,0,21"/>
+  <Grid Margin="0,0,0,8"><TextBlock Text="屏幕坐标" FontWeight="SemiBold" VerticalAlignment="Center"/><Button Content="重新选点" HorizontalAlignment="Right" FontSize="12" Padding="10,5" MinHeight="30" Click="RepickClick"/></Grid>
+  <Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="14"/><ColumnDefinition/></Grid.ColumnDefinitions><StackPanel><TextBlock Text="X" Foreground="{StaticResource Muted}" FontSize="11" Margin="0,0,0,5"/><TextBox x:Name="XBox" AutomationProperties.Name="横坐标 X"/></StackPanel><StackPanel Grid.Column="2"><TextBlock Text="Y" Foreground="{StaticResource Muted}" FontSize="11" Margin="0,0,0,5"/><TextBox x:Name="YBox" AutomationProperties.Name="纵坐标 Y"/></StackPanel></Grid>
+  <TextBlock Text="鼠标按键" FontWeight="SemiBold" Margin="0,19,0,8"/>
+  <StackPanel Orientation="Horizontal"><RadioButton x:Name="LeftRadio" Content="鼠标左键" GroupName="MouseButton" IsChecked="True" Margin="0,0,28,0"/><RadioButton x:Name="RightRadio" Content="鼠标右键" GroupName="MouseButton"/></StackPanel>
+  <TextBlock Text="点击后等待" FontWeight="SemiBold" Margin="0,19,0,8"/>
+  <Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="10"/><ColumnDefinition Width="105"/></Grid.ColumnDefinitions><TextBox x:Name="WaitBox" AutomationProperties.Name="点击后等待时间"/><ComboBox x:Name="UnitBox" Grid.Column="2" SelectedIndex="1" AutomationProperties.Name="等待时间单位"><ComboBoxItem Content="毫秒"/><ComboBoxItem Content="秒"/></ComboBox></Grid>
+  <TextBlock Text="支持小数；最短 1 毫秒，最长 24 小时。实际速度以系统响应为准。" FontSize="11" Foreground="{StaticResource Muted}" TextWrapping="Wrap" Margin="0,8,0,0"/>
+  <TextBlock x:Name="ErrorText" Foreground="#C44747" TextWrapping="Wrap" FontSize="12" Margin="0,13,0,0"/>
+  <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,17,0,0"><Button Content="取消" Width="82" IsCancel="True" Margin="0,0,9,0"/><Button Content="保存位置" Width="108" Style="{StaticResource PrimaryButton}" IsDefault="True" Click="SaveClick"/></StackPanel>
+ </StackPanel>
+</Window>
