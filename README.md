@@ -4,7 +4,9 @@ Windows x64 中文桌面连点器。使用 WPF / .NET 10，最终发布为自包
 
 ## 直接使用
 
-打开 release/点序.exe。无需安装、无需单独安装 .NET 运行环境。
+从 [GitHub Releases 下载免安装版](https://github.com/zzz-1218/-/releases/latest)，展开 Assets，下载 `DianXu.exe` 后双击运行。无需安装、无需单独安装 .NET 运行环境。
+
+本地编译输出为 `release/点序.exe`，与发布附件 `DianXu.exe` 为同一个程序。
 详见 docs/使用说明.txt。默认 F6 启停、F8 紧急停止；运行时真实鼠标快速双击左键也可停止。
 
 - 固定单点或多点顺序循环；每点独立左/右键与等待时间。
