@@ -1,0 +1,7 @@
+.tools/
+**/bin/
+**/obj/
+.test-data/
+artifacts/
+release/
+*.user
